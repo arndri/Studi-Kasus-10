@@ -1,0 +1,10 @@
+-2100018229 Shaluna Fasya Elmina
+-2100018234 Dini Rohmah
+-2100018249 Andri Pratama 
+
+Membuat class node member string nama dan int nim
+membuat pointer node 5 buah
+Membuat node pada masing-masing pointer 
+Menghubungkan node
+Menggunakan loop while memasukkan Input ke masing-masing node
+Output data dalam node menggunakan loop while
