@@ -22,6 +22,10 @@ void cetak(node* n){
   }
 }
 
+void proses(){
+  
+}
+
 int main() {
   //Input dan Proses Dini Rohmah & Shaluna Fasya Elmina
   node * head=NULL;
