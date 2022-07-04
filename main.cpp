@@ -5,63 +5,43 @@ class node{
   public:
   string nama;
   int nim;
-  node* next;
+  node *next;
+  node *head=NULL;
+  void input();
+  void output();
 };
-//Fungsi Output Andri Pratama
-void cetak(node* n){
-  int i=1;
-  cout<<"Data Finalis Lomba Parmatika"<<endl;
-  cout<<"=================================="<<endl;
-  while(n!=NULL){
-    cout<<"Data ke-"<<i<<"\n";
-    cout<<"Nama : "<<n->nama<<"\n";
-    cout<<"NIM  : "<<n->nim<<"\n";
-    n=n->next;
-    i++;
-    cout<<"=================================="<<endl;
+
+void node::input(){
+  node *temp;
+  int panjang;
+  cout<<"Masukkan Jumlah Mahasiswa : ";cin>>panjang;
+  for(int i=0;i<panjang;i++){
+    cout<<"------------------------------------\n";
+    temp=new node;
+    cout<<"Masukkan Nama Mahasiswa : ";cin>>temp->nama;
+    cout<<"Masukkan NIM Mahasiswa  : ";cin>>temp->nim;
+    temp->next=head;
+    head=temp;
   }
 }
 
-void proses(){
-  
+
+
+void node::output(){
+  node *temp;
+  temp=head;
+  cout<<"=====================================\n";
+  cout<<"Daftar Mahasiswa Di Babak Final\n";
+  while(temp != NULL){
+    cout<<"------------------------------------\n";
+    cout<<"Nama  : "<<temp->nama<<endl;
+    cout<<"NIM  : "<<temp->nim<<endl;
+    temp=temp->next;
+  }
 }
 
 int main() {
-  //Input dan Proses Dini Rohmah & Shaluna Fasya Elmina
-  node * head=NULL;
-  node * second=NULL;
-  node * third=NULL;
-  node * fourth=NULL;
-  node * fifth=NULL;
-
-  //Membuat node pada masing-masing pointer
-  head=new node();
-  second=new node();
-  third=new node();
-  fourth=new node();
-  fifth=new node();
-
-  //Menggunakan pointer temp ke pointer node pertama 
-  node*temp=head;
-
-  //Menghubungkan node
-  head->next=second;
-  second->next=third;
-  third->next=fourth;
-  fourth->next=fifth;
-  fifth->next=NULL;
-  
-  //Input
-  cout<<"--------------------------------"<<endl;
-  while(temp!=NULL){
-    cout<<"Masukkan Nama : ";cin>>temp->nama;
-    cout<<"Masukkan NIM  : ";cin>>temp->nim;
-    temp=temp->next;
-    cout<<"--------------------------------"<<endl;
-  }
-
-
-  //Output
-  cetak(head);
-  
+  node a;
+  a.input();
+  a.output();
 }

@@ -2,9 +2,11 @@
 -2100018234 Dini Rohmah
 -2100018249 Andri Pratama 
 
-Membuat class node member string nama dan int nim
-membuat pointer node 5 buah
-Membuat node pada masing-masing pointer 
-Menghubungkan node
-Menggunakan loop while memasukkan Input ke masing-masing node
-Output data dalam node menggunakan loop while
+Input
+Input jumlah mahasiswa
+Loop for dengan batas jumlah mahasiswa
+di dalam loop for membuat linked list node yang akan menampung nama dan NIM dalam linked listnya
+
+Ouput
+buat pointer sementara, sambungkan dengan head dari linked list
+output data dalam linked list dengan loop while, program akan output nama dan nim dari linked list selama pointer sementara tidak menunjukkan ke NULL
